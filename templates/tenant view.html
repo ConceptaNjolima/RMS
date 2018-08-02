@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<body style="background-color: darkslategray">
+    <div class="slider" >
+        <ul class="slides" style="height: 100%">
+          <li>
+            <img src="{% static 'resources/images/whitewall.jpeg' %}" style="width: 100%; height: 100%">
+            <div class="caption center-align">
+              <h3 style="color: orange">WELCOME <span style="color: darkslategray;">{{ user.username }}</span> </h3>
+                <span style="color: black">email:{{ user.email }}</span>
+
+            </div>
+          </li>
+            <li>
+            <img src="{% static 'resources/images/white1.jpeg' %}" style="width: 100%; height: 100%">
+            <div class="caption center-align">
+              <h3 style="color: orange">WELCOME <span style="color: darkslategray;">{{ user.username }}</span> </h3>
+                <span>email:{{ user.email }}</span>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+
+    <script>
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+    </script>
+
+
+{% endblock %}
+</body>

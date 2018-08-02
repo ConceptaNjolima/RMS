@@ -1,0 +1,44 @@
+{% load staticfiles %}
+{% csrf_token %}
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css"  rel="stylesheet" href="{% static 'resources/css/styles.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+<nav class="cyan darken-4">
+    <div class="nav-wrapper">
+        <a href="{% url 'basic_app:index' %}" class="brand-logo" style="color: sandybrown">
+            <i class="material-icons" >home</i>RMS</a>
+<nav class="cyan darken-4">
+    <div class="nav-wrapper">
+      <a href="{% url 'basic_app:index' %}" class="brand-logo" style="color: sandybrown"><i class="material-icons" >home</i>RMS</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a name="manager" class="btn waves-effect waves-red" style="background-color:sandybrown;color: black" href="{% url 'basic_app:managerLogin' %}">MANAGER</a></li>
+        <li><a name="tenant" class="btn waves-effect waves-red" style="color: black" href="{% url 'basic_app:login' %}">TENANT</a></li>
+      </ul>
+    </div>
+    <ul class="sidenav" id="mobile-demo" style="background-color: orange">
+    <li><a href="{% url 'basic_app:managerLogin' %}">MANAGER</a></li>
+    <li><a href="{% url 'basic_app:login' %}">TENANT</a></li>
+  </ul>
+</nav>
+
+<script type="text/javascript" rel="script" src="{% static 'resources/js/materialize.min.js' %}"></script>
+<script type="text/javascript" rel="script" src="{% static 'resources/js/jquery-3.3.1.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript" rel="script" src="{% static 'resources/js/move.js' %}"></script>
+
+        <script>
+                $(document).ready(function(){
+            $('.sidenav').sidenav();
+          });
+
+        </script>
+
+{% block content %}
+
+{% endblock %}
+

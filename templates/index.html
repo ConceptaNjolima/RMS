@@ -1,0 +1,62 @@
+<title>Home</title>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<body style="background-color:darkslategray;">
+    <br>
+<div class="slider" >
+    <ul class="slides" style="height: 100%">
+      <li>
+        <img src="{% static 'resources/images/condominiums.jpg' %}"> <!-- random image -->
+        <div class="caption center-align">
+          <h3 style="color: orange">RENT MANAGEMENT SYSTEM</h3>
+            <h5 style="color: white"><i>No worries More Gain</i></h5>
+        </div>
+      </li>
+{#      <li>#}
+{#        <img src="{% static 'resources/images/white scrapper.jpeg' %}"> <!-- random image -->#}
+{#        <div class="caption left-align">#}
+{#          <h3 style="color: orange">NO WORRIES</h3>#}
+{#          <h5 class="light grey-text text-lighten-3">Quit worries about your rent management</h5>#}
+{#        </div>#}
+{#      </li>#}
+      <li>
+        <img src="{% static 'resources/images/courtyard.jpeg' %}"> <!-- random image -->
+        <div class="caption right-align">
+          <h3 style="color: orange">TENANTS</h3>
+          <h5 class="light grey-text text-lighten-3"> Can discuss and get information on their rent plans </h5>
+        </div>
+      </li>
+      <li>
+        <img src="{% static 'resources/images/white scrapper.jpeg' %}"> <!-- random image -->
+        <div class="caption center-align">
+          <h3 style="color: orange">MANAGERS</h3>
+          <h5 class="light grey-text text-lighten-3">Easily and efficiently managing rentals and apartments</h5>
+        </div>
+      </li>
+    </ul>
+</div>
+<div style=" padding-left: 600px">
+<ul>
+    <li>QUICK LINKS</li>
+    <li><a href="{% url 'basic_app:login' %}" style="color: orange">Login as Tenant</a></li>
+    <li><a href="{% url 'basic_app:managerLogin' %}"style="color: orange">Login as Manager</a></li>
+</ul>
+
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+      $('.slider').slider();
+    });
+</script>
+
+
+
+
+
+{% endblock %}
+</body>

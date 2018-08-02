@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+
+ <div>
+      <body style="background-color: darkslategray">
+      <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">dehaze</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating red"   href="{% url 'basic_app:register' %}"><i class="material-icons">add_circle_outline</i></a></li>
+            <li><a class="btn-floating yellow darken-1" href="{% url 'basic_app:manager' %}"><i class="material-icons">assignment</i></a></li>
+
+          </ul>
+        </div>
+    <div class="slider" >
+        <ul class="slides" style="height: 100%">
+          <li>
+            <img src="{% static 'resources/images/manyhouses.jpeg' %}" style="width: 100%; height: 100%">
+            <div class="caption center-align">
+              <h3 style="color: darkslategrey">WELCOME MANAGER<span style="color: orange;">{{ user.username }}</span> </h3>
+                <span style="color: black">email:{{ user.email }}</span>
+
+            </div>
+          </li>
+            <li>
+            <img src="{% static 'resources/images/couch.jpeg' %}" style="width: 100%; height: 100%">
+            <div class="caption center-align">
+              <h3 style="color: black"> WELCOME MANAGER <span style="color: orange;">{{ user.username }}</span> </h3>
+                <span style="color: black">email:{{ user.email }}</span>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+            $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+        $('.slider').slider();
+      });
+
+    </script>
+{% endblock %}
+
+

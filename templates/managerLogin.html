@@ -1,0 +1,15 @@
+<title>Login</title>
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+    <h2>Please Login</h2>
+        <form action="" method="POST">
+            {% csrf_token%}
+            <input type="text" name="username" placeholder="Username">
+            <span><label style="font-size: 15px;">Password</label></span>
+            <input type="password" name="password" placeholder="password">
+            <input type="submit" value="LOGIN" >
+            <div>Do not have an Account?<span><a href="{% url 'basic_app:register' %}">  Create an Account</a></span></div>
+        </form>
+    </div>
+{% endblock %}
