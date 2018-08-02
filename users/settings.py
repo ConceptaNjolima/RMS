@@ -25,7 +25,7 @@ SECRET_KEY = 'bzof+j1p*ue*kcdq0sb+q=#1g4fys#-i43l1&bxt-py@o)b_sv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['njolimaconcepta.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
